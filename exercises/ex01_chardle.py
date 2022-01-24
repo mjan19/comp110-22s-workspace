@@ -33,5 +33,7 @@ if len(five_character_word) == 5:
                     print(str(number_of_matches) + " instances of " + single_character + " found in " + five_character_word)
     else: 
         print("Error: Character must be a single character.")
+        exit()
 else:
     print("Error: Word must contain 5 characters")
+    exit()
