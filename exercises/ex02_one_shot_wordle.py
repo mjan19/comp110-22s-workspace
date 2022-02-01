@@ -19,12 +19,12 @@ while tracking_index < len(letters_guess):
     else:
         exist_anywhere_else: bool = False
         alternate_indices = 0
-        while exist_anywhere_else == False and alternate_indices < number_of_letters:
+        while not exist_anywhere_else and alternate_indices < number_of_letters:
             if letters_guess[tracking_index] == secret_word[alternate_indices]:
                 exist_anywhere_else: bool = True
             else:
                 alternate_indices += 1
-        if exist_anywhere_else == True:
+        if exist_anywhere_else:
             resulting_colors += YELLOW_BOX
         else:
             resulting_colors += WHITE_BOX
