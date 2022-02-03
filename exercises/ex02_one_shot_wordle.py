@@ -12,7 +12,7 @@ tracking_index = 0
 resulting_colors = ""
 letters_guess: str = input(f"What is your {number_of_letters}-letter guess? ")
 while len(letters_guess) != number_of_letters:
-    letters_guess: str = input(f"That was not {number_of_letters} letters! Try again: ")
+    letters_guess = input(f"That was not {number_of_letters} letters! Try again: ")
 while tracking_index < len(letters_guess):
     if letters_guess[tracking_index] == secret_word[tracking_index]:
         resulting_colors += GREEN_BOX
@@ -21,7 +21,7 @@ while tracking_index < len(letters_guess):
         alternate_indices = 0
         while not exist_anywhere_else and alternate_indices < number_of_letters:
             if letters_guess[tracking_index] == secret_word[alternate_indices]:
-                exist_anywhere_else: bool = True
+                exist_anywhere_else = True
             else:
                 alternate_indices += 1
         if exist_anywhere_else:
@@ -32,7 +32,7 @@ while tracking_index < len(letters_guess):
 print(resulting_colors)
 if letters_guess == secret_word:
     print("Woo! You got it!")
-    exit()
+    # exit()
 else:
     print("Not quite. Play again soon!")
-    exit()
+    # exit()
