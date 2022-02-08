@@ -41,7 +41,6 @@ def input_guess(expected_length: int) -> str:
 
     while len(guess) != expected_length:
         guess = input(f"That wasn't {expected_length} chars! Try again: ")
-    assert len(guess) == expected_length
     return guess
 
 
