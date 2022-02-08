@@ -4,7 +4,7 @@ __author__ = "730510654"
 
 
 def contains_char(word: str, single_character: str) -> bool:
-    "Searches for single character in the word."
+    """Searches for single character in the word."""
     assert len(single_character) == 1
     tracking_index = 0
 
@@ -16,7 +16,7 @@ def contains_char(word: str, single_character: str) -> bool:
 
 
 def emojified(guess: str, secret: str) -> str:
-    "Gives a green, yellow, or white box based on whether the letters match up or not."
+    """Gives a green, yellow, or white box based on whether the letters match up or not."""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
@@ -36,8 +36,9 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def input_guess(expected_length: int) -> str:
-    "Prompts the user for a guess that matches the proper amount of letters asked"
+    """Prompts the user for a guess that matches the proper amount of letters asked."""
     guess: str = input(f"Input a {expected_length} character word: ")
+    
     while len(guess) != expected_length:
         guess = input(f"That wasn't {expected_length} chars! Try again: ")
     return guess
