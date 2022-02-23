@@ -17,3 +17,7 @@ schools.pop("Duke")
 
 is_duke_present: bool = "Duke" in schools
 print(f"Duke is present: {is_duke_present}")
+
+
+for school in schools:
+    print(f"Key: {school} -> Value: {schools[school]}")
