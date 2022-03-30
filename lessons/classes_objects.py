@@ -5,9 +5,9 @@ class Pizza:
     """Models the idea of a Pizza."""
 
     # Attribute Definitions
-    size: str = "small"
-    toppings: int = 0
-    extra_cheese: bool = False
+    size: str
+    toppings: int
+    extra_cheese: bool
 
     def __init__(self, size: str, toppings: int, extra_cheese: bool):
         """Constructor definition for initialization of attributes."""
